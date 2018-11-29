@@ -6,754 +6,317 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>High Brow Scottsdale</title>
-    <link href="/assets/css/reset.css" type="text/css" rel="stylesheet">
-    <!-- <link href="/assets/css/style.css" type="text/css" rel="stylesheet"> -->
+    <link href="../assets/css/reset.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet">
-    <style>
-        body, html {
-    height: 100%;
-    font-family: 'Open Sans Condensed', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-  display: flex;
-  flex-direction: column;
-}
-.content {
-  flex: 1 0 auto;
-}
-  /*selects all divs with bg__ in the paralax class. I think this is where the magic is*/
-  .parallax [class*="bg__"] {
-    position: relative;
-    height: 50vh;
-    text-indent: -9999px;
-    background-attachment: fixed;  /*this may be the key*/
-    background-position: top center;
-    background-size: cover;
-  }
-  /*selects every second child and makes it an inset box, in this case bar and baz*/
-  .parallax [class*="bg__"]:nth-child(2n) {
-    box-shadow: inset 0 0 1em #111;
-  }
-
-  /*parallax template*/
-  .parallax .bg__break {
-    height: 900px;
-    box-shadow: inset 0 0 1em #111;
-    background-image: url("../assets/images/woman-1281830.jpg");
-  }
-    /*text box template*/
-    .parallax .capture {
-    /* float: right; */
-    width: 500px;
-    height: 200px;
-    padding: 1em;
-    margin: -1.5em 1em 0 0;
-    text-indent: 0;
-    background: rgba(243, 243, 243, 0.75);
-    box-shadow: 0 1px 0.125em #333; 
-    opacity: .6; 
-    position: relative;
-    top: 250px;
-    left: 150px;
-  }
-
-    /*container template*/
-    article .container {
-    width: 600px;
-    margin: 0 auto;
-  }
-
-  /*opening div*/
-  .parallax .bg__break1 {
-    height: 900px;
-    box-shadow: inset 0 0 1em #111;
-    background-image: url("../assets/images/woman-1281830.jpg");
-  }
-  /*title box in opening div*/
-  .parallax .capture1 {
-    /* float: right; */
-    width: 500px;
-    height: 200px;
-    padding: 1em;
-    margin: -1.5em 1em 0 0;
-    text-indent: 0;
-    font-size: xx-large;
-    position: relative;
-    top: 250px;
-    left: 150px;
-  }
-  h1{
-    font-weight: bold;
-  }
-    /*break 2 following first paragraph*/
-    .parallax .bg__break2 {
-    height: 500px;
-    box-shadow: inset 0 0 1em #111;
-    background-image: url("../assets/images/woman-1439909 copy.jpg");
-  }
-   /*text box 2*/
-   .parallax .capture2 {
-    /* float: right; */
-    width: 200px;
-    height: 100px;
-    padding: 1em;
-    margin: -1.5em 1em 0 0;
-    text-indent: 0;
-    background: rgba(243, 243, 243, 0.75);
-    box-shadow: 0 1px 0.125em #333;
-    opacity: .6;
-    text-align: center;
-    position: relative;
-    top: 250px;
-    left: 170px;
-  }
-  article .container1 {
-    height:400px;
-    background-size: cover; 
-    background-image: url("../assets/images/gradient.png");
-    color: white;
-    text-align: center;
-    font-size: x-large;
-  }
-  h2{
-    font-size: xx-large;
-  }
-  /*the rest is just formatting not related to the paralax class*/
-  #arrow{
-    position: relative;
-    top: 550px;
-    left: 850px;
-  }
-  #bookingTitle{
-      padding-top: 20px;
-  }
-  #bookingText{
-      margin-top: 20px;
-  }
-  #bookingButton{
-    background-color: transparent;
-    color: white;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-  }
-  /* about div */
-  #aboutButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-  }
-  #aboutDivLeftSide{
-    float: left;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  #aboutDivTitle{
-    padding-bottom: 20px;
-  }
-  #aboutDivRightSide{
-      padding-top: 50px;
-    float: right;
-  }
-    article .container2 {
-    width: 800px;
-    margin: 0 auto;
-  }
-  #social{
-    clear: both;
-  }
-  article .container3 {
-    height:250px;
-    background-size: cover; 
-    background-image: url("../assets/images/gradient2.png");
-    color: white;
-    text-align: center;
-    font-size: x-large;
-  }
-  #socialText{
-      padding-bottom: 20px;
-      padding-top: 50px;
-  }
-  .parallax .bg__break3 {
-    height: 500px;
-    box-shadow: inset 0 0 1em #111;
-    background-image: url("../assets/images/woman-3138567_1920.jpg");
-  }
-     /*text box 3*/
-     .parallax .capture3 {
-    float: right;
-    width: 250px;
-    height: 200px;
-    padding: 1em;
-    margin: -1.5em 1em 0 0;
-    text-indent: 0;
-    background: rgba(243, 243, 243, 0.75);
-    box-shadow: 0 1px 0.125em #333;
-    opacity: .6;
-    text-align: center;
-    position: relative;
-    top: 35px;
-    right: 40px;
-  }
-  #galleryButton{
-    background-color: #333;
-    color: white;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  #servicesButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  #testimonialsButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: white;
-  }
-  #qaButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  #learnButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  #shopButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: #333;
- color: white;
-  }
-  #contactButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  #formsButton{
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  article .container4 {
- text-align: center;
- padding-top: 20px;
-  }
-  article .container5 {
- text-align: center;
- padding-top: 20px;
-  }
-  article .container5 {
- text-align: center;
- padding-top: 20px;
- background-size: cover; 
-    background-image: url("../assets/images/gradient3.png");
-    color: white;
-  }
-  #sixLeftSide{
-      float: left;
-      margin-left: 50px;
-  }
-  #sixRightSide{
-      float: right;
-      margin-right: 50px;
-  }
-  .parallax .bg__break4 {
-    clear: both;
-    height: 500px;
-    box-shadow: inset 0 0 1em #111;
-    background-image: url("../assets/images/massage-therapy-1612308.jpg");
-  }
-     /*text box 3*/
-     .parallax .capture4 {
-        clear: both;
-    width: 250px;
-    height: 200px;
-    padding: 1em;
-    margin: -1.5em 1em 0 0;
-    text-indent: 0;
-    background: rgba(243, 243, 243, 0.75);
-    box-shadow: 0 1px 0.125em #333;
-    opacity: .6;
-    text-align: center;
-    position: relative;
-    top: 250px;
-    left: 170px;
-  }
-  article .container8 {
-      width: 100%;
- padding-top: 20px;
- clear: both;
- height: 200px;
- display: flex;
- flex-wrap: wrap;
- background-color: #333;
- color: white;
-
-  }
-  .footer {
-  flex-shrink: 0;
-  background-color: #333;
- color: white;
- /* display: grid;
- grid-template-columns: 33.33% 33.33% 33.33%;
- grid-template-rows: 100%; */
-}
-#footer{
-    display: grid;
- grid-template-columns: 33.33% 33.33% 33.33%;
- grid-template-rows: 100%;
- width: 100%;
-}
-#footerColumnOne{
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-#footerColumnTwo{
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-#footerColumnThree{
-    padding-top: 20px;
-    text-align: center;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-  
-/* selected link */
-a:active {
-    color: white;
-}
-a:link {
-    color: white;
-}
-
-/* visited link */
-a:visited {
-    color: white;
-}
-
-/* mouse over link */
-a:hover {
-    color: white;
-}
-
-  /* navbar */
-.animated-icon1, .animated-icon3, .animated-icon4 {
-width: 30px;
-height: 20px;
-position: relative;
-margin: 0px;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-cursor: pointer;
-}
-.animated-icon1 span, .animated-icon3 span, .animated-icon4 span {
-display: block;
-position: absolute;
-height: 3px;
-width: 100%;
-border-radius: 9px;
-opacity: 1;
-left: 0;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .25s ease-in-out;
--moz-transition: .25s ease-in-out;
--o-transition: .25s ease-in-out;
-transition: .25s ease-in-out;
-}
-.animated-icon1 span {
-background: #9b242e;
-}
-.animated-icon1 span:nth-child(1) {
-top: 0px;
-}
-.animated-icon1 span:nth-child(2) {
-top: 10px;
-}
-.animated-icon1 span:nth-child(3) {
-top: 20px;
-}
-.animated-icon1.open span:nth-child(1) {
-top: 11px;
--webkit-transform: rotate(135deg);
--moz-transform: rotate(135deg);
--o-transform: rotate(135deg);
-transform: rotate(135deg);
-}
-.animated-icon1.open span:nth-child(2) {
-opacity: 0;
-left: -60px;
-}
-.animated-icon1.open span:nth-child(3) {
-top: 11px;
--webkit-transform: rotate(-135deg);
--moz-transform: rotate(-135deg);
--o-transform: rotate(-135deg);
-transform: rotate(-135deg);
-}
-#linkList{
-    float: right;
-    text-align: right;
-}
-#navbar{
-    background-color: transparent;
-}
-#menu{
-    background-color: transparent;
-}
-#brand{
-    color: #36271a;
-  text-shadow:
-   -1px -1px 0 white,  
-    1px -1px 0 white,
-    -1px 1px 0 white,
-     1px 1px 0 white;
-}
-#tagLine2{
-    font-size: x-large;
-}
-    </style>
+    <link href="../assets/css/style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-        <div class="content">
-    <article>
-        <section class="parallax">
-            <div class="bg__break1">
-                <!-- <div class="capture"></div> -->
-                <div class="capture1">
-                    <h1>High Brow Scottsdale</h1>
-                    <h4>The art of beautiful skin</h4>
-                    <!-- <h4>The art of a beautiful you</h4> -->
+    <div class="content">
+        <article>
+            <section class="parallax">
+                <div class="bg__break1">
+                    <!-- <div class="capture"></div> -->
+                    <div class="capture1">
+                        <h1>High Brow Scottsdale</h1>
+                        <h4>The art of beautiful skin</h4>
+                        <!-- <h4>The art of a beautiful you</h4> -->
+                    </div>
+                    <img src="../assets/images/iconmonstr-angel-down-thin-72.png" alt="down arrow" id="arrow">
                 </div>
-                <img src="../assets/images/iconmonstr-angel-down-thin-72.png" alt="down arrow" id="arrow">
-            </div>
-        </section>
-        <section class="sticky-top" id="menu">
-            <!--Navbar-->
-            <nav class="navbar navbar-light amber lighten-4 mb-4 sticky-top" id="navbar">
-                <!-- Navbar brand -->
-                <a class="navbar-brand sticky-top" href="../pages/main.html" id="brand">High Brow Scottsdale</a>
+            </section>
+            <section class="sticky-top" id="menu">
+                <!--Navbar-->
+                <nav class="navbar navbar-light amber lighten-4 mb-4 sticky-top" id="navbar">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand sticky-top" href="../pages/main.html" id="brand">High Brow Scottsdale</a>
 
-                <!-- Collapse button -->
-                <button class="navbar-toggler sticky-top" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
-                    aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
-                    <div class="animated-icon1"><span></span><span></span><span></span></div>
-                </button>
-                <!-- Collapsible content -->
-                <div class="collapse navbar-collapse sticky-top" id="navbarSupportedContent20">
-                    <!-- Links -->
-                    <ul class="navbar-nav mr-auto" id="linkList">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="../pages/main.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/testimonials.html">Testimonials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/qa.html">Questions & Answers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/learn.html">Learn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/forms.html">Forms</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/contact.html">Contact</a>
-                        </li>
-                    </ul>
-                    <!-- Links -->
+                    <!-- Collapse button -->
+                    <button class="navbar-toggler sticky-top" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+                        aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="animated-icon1"><span></span><span></span><span></span></div>
+                    </button>
+                    <!-- Collapsible content -->
+                    <div class="collapse navbar-collapse sticky-top" id="navbarSupportedContent20">
+                        <!-- Links -->
+                        <ul class="navbar-nav mr-auto" id="linkList">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="../pages/main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/testimonials.html">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/qa.html">Questions & Answers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/learn.html">Learn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/forms.html">Forms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <!-- Links -->
+                    </div>
+                    <!-- Collapsible content -->
+                </nav>
+                <!--/.Navbar-->
+            </section>
+            <section>
+                <div class="container1">
+                    <h2 id="bookingTitle">High Brow Scottsdale</h2>
+                    <div id="bookingText">
+                        <p>Everyone is different and here at High Brow Scotttsdale we work with our clients to
+                            determine
+                            the
+                            best skin care regime to meet their needs.</p>
+                        <p>We look forward to helping each and every one of our clients get the best skin of their
+                            lives.</p>
+                        <p>Set up your complimentary consultation now.</p>
+                    </div>
+                    <a href="https://www.schedulicity.com/scheduling/HBWMAH/services" target="_blank">
+                        <button type="button" id="bookingButton">Book Now</button></a>
                 </div>
-                <!-- Collapsible content -->
-            </nav>
-            <!--/.Navbar-->
-        </section>
-        <section>
-            <div class="container1">
-                <h2 id="bookingTitle">High Brow Scottsdale</h2>
-                <div id="bookingText">
-                    <p>Everyone is different and here at High Brow Scotttsdale we work with our clients to determine
-                        the
-                        best skin care regime to meet their needs.</p>
-                    <p>We look forward to helping each and every one of our clients get the best skin of their lives.</p>
-                    <p>Set up your complimentary consultation now.</p>
+            </section>
+            <section class="parallax">
+                <div class="bg__break2">
+                    <div class="capture2">
+                        <h3 id="tagLine2">skincare to meet your personalized needs.</h3>
+                    </div>
                 </div>
-                <a href="https://www.schedulicity.com/scheduling/HBWMAH/services" target="_blank">
-                    <button type="button" id="bookingButton">Book Now</button></a>
-            </div>
-        </section>
-        <section class="parallax">
-            <div class="bg__break2">
-                <div class="capture2">
-                    <h3 id="tagLine2">skincare to meet your personalized needs.</h3>
+            </section>
+            <section>
+                <div class="container2">
+                    <div id="aboutDivLeftSide">
+                        <h2 id="aboutDivTitle">Our Story</h2>
+                        <img src="../assets/images/woman-3096664.jpg" alt="model" height="300px">
+                    </div>
+                    <div id="aboutDivRightSide">
+                        <p>words</p>
+                        <p>more words</p>
+                        <a href="../pages/about.html">
+                            <button type="button" id="aboutButton">Read More</button></a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="container2">
-                <div id="aboutDivLeftSide">
-                    <h2 id="aboutDivTitle">Our Story</h2>
-                    <img src="../assets/images/woman-3096664.jpg" alt="model" height="300px">
-                </div>
-                <div id="aboutDivRightSide">
-                    <p>words</p>
-                    <p>more words</p>
-                    <a href="../pages/about.html">
-                        <button type="button" id="aboutButton">Read More</button></a>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container3" id="social">
-                <h4 id="socialText">Connect with us at:</h4>
-                <a href="https://www.facebook.com/highbrowscottsdale" target="_blank">
-                    <img src="../assets/images/facebook.png" alt="facebook" height="100px">
-                </a>
-                <a href="https://www.instagram.com/highbrowscottsdale/" target="_blank">
-                    <img src="../assets/images/instagram.png" alt="instagram" height="100px">
-                </a>
-                <a href="https://www.yelp.com/biz/high-brow-waxing-and-skin-scottsdale-3" target="_blank">
-                    <img src="../assets/images/yelp.png" alt="yelp" height="100px">
-                </a>
+            </section>
+            <section>
+                <div class="container3" id="social">
+                    <h4 id="socialText">Connect with us at:</h4>
+                    <a href="https://www.facebook.com/highbrowscottsdale" target="_blank">
+                        <img src="../assets/images/facebook.png" alt="facebook" height="100px">
+                    </a>
+                    <a href="https://www.instagram.com/highbrowscottsdale/" target="_blank">
+                        <img src="../assets/images/instagram.png" alt="instagram" height="100px">
+                    </a>
+                    <a href="https://www.yelp.com/biz/high-brow-waxing-and-skin-scottsdale-3" target="_blank">
+                        <img src="../assets/images/yelp.png" alt="yelp" height="100px">
+                    </a>
+                    <a href="https://www.facebook.com/highbrowscottsdale" target="_blank">
+                        <img src="../assets/images/facebookWhite.png" alt="facebook" height="100px">
+                    </a>
+                    <a href="https://www.instagram.com/highbrowscottsdale/" target="_blank">
+                        <img src="../assets/images/instagramWhite.png" alt="instagram" height="100px">
+                    </a>
+                    <a href="https://www.yelp.com/biz/high-brow-waxing-and-skin-scottsdale-3" target="_blank">
+                        <img src="../assets/images/yelpWhite.png" alt="yelp" height="100px">
+                    </a>
 
-            </div>
-        </section>
-        <section>
-            <div class="container4">
-                <h2 id="servicesDiv">Services</h2>
-                <div id="servicesText">
-                    <p>lorem</p>
-                    <p>lorem</p>
-                    <p>lorem</p>
                 </div>
-                <a href="../pages/services.html">
-                    <button type="button" id="servicesButton">See All of Our Services</button></a>
-            </div>
-        </section>
-        <section class="parallax">
-            <div class="bg__break3">
-                <div class="capture3">
-                    <h3>Gallery</h3>
-                    <p>Check out before and after photos from some of our services in our gallery.</p>
-                    <a href="../pages/gallery.html">
-                        <button type="button" id="galleryButton">See More</button></a>
-                </div>
-            </div>
-        </section>
-        </section>
-        <section>
-            <div class="container5">
-                <h2 id="lorem">Testimonials</h2>
-                <div id="">
-                    <p>lorem</p>
-                    <p>lorem</p>
-                    <p>lorem</p>
-                </div>
-                <a href="../pages/testimonials.html">
-                    <button type="button" id="testimonialsButton">See more testimonials here</button></a>
-            </div>
-        </section>
-        <section>
-            <div class="container6">
-                <div id="sixLeftSide">
-                    <h2 id="lorem">Questions & Answers</h2>
-                    <div id="">
+            </section>
+            <section>
+                <div class="container4">
+                    <h2 id="servicesDiv">Services</h2>
+                    <div id="servicesText">
                         <p>lorem</p>
                         <p>lorem</p>
                         <p>lorem</p>
                     </div>
-                    <a href="../pages/qa.html">
-                        <button type="button" id="qaButton">Get Your Questions Answered Here</button></a>
+                    <a href="../pages/services.html">
+                        <button type="button" id="servicesButton">See All of Our Services</button></a>
                 </div>
-                <div id="sixRightSide">
-                    <h2 id="lorem">Learn</h2>
-                    <div id="">
-                        <p>lorem</p>
-                        <p>lorem</p>
-                        <p>lorem</p>
+            </section>
+            <section class="parallax">
+                <div class="bg__break3">
+                    <div class="capture3">
+                        <h3>Gallery</h3>
+                        <p>Check out before and after photos from some of our services in our gallery.</p>
+                        <a href="../pages/gallery.html">
+                            <button type="button" id="galleryButton">See More</button></a>
                     </div>
-                    <a href="../pages/learn.html">
-                        <button type="button" id="learnButton">Learn More About The Benefits of Advanced Skincare Here</button></a>
                 </div>
-            </div>
-        </section>
-        <section class="parallax">
-            <div class="bg__break4">
-                <div class="capture4">
-                    <h3>Shop</h3>
-                    <p>lorem</p>
-                    <button type="button" id="shopButton">Visit our shop here</button></a>
-                </div>
-            </div>
-        </section>
-        </section>
-        <section>
-            <div class="container7">
-                <div id="sixLeftSide">
-                    <h2 id="lorem">Forms</h2>
-                    <div id="">
-                        <p>lorem</p>
-                        <p>lorem</p>
-                        <p>lorem</p>
-                    </div>
-                    <a href="../pages/forms.html">
-                        <button type="button" id="qaButton">Find Forms Here</button></a>
-                </div>
-                <div id="sixRightSide">
-                    <h2 id="lorem">Contact Us</h2>
-                    <div id="">
-                        <p>lorem</p>
-                        <p>lorem</p>
-                        <p>lorem</p>
-                    </div>
-                    <a href="../pages/learn.html">
-                        <button type="button" id="learnButton">Go Here For Our Contact Information</button></a>
-                </div>
-            </div>
-        </section>
-        <section>
-            </div>
-            <div class="container8">
-                <div class="footer" id="footer">
-                    <div class="" id="footerColumnOne">
-                        <b>
-                            <p>Sitemap</p>
-                        </b>
-                        <a href="../pages/main.html">Home</a>
-
-                        <a href="../pages/about.html">About</a>
-
-                        <a href="../pages/services.html">Services</a>
-
-                        <a href="../pages/gallery.html">Gallery</a>
-
-                        <a href="../pages/testimonials.html">Testimonials</a>
-
-                        <a href="../pages/qa.html">Questions & Answers</a>
-
-                        <a href="../pages/learn.html">Learn</a>
-
-                        <a href="../pages/shop.html">Shop</a>
-
-                        <a href="../pages/forms.html">Forms</a>
-
-                        <a href="../pages/contact.html">Contact</a>
-
-                    </div>
-                    <div class="" id="footerColumnTwo">
-                        <b>
-                            <p>Company</p>
-                        </b>
-                       <a href="../pages/contact.html">Contact us</a>
-                       <a href="#">Careers</a>
-                        <a href="#">Salon</a>
-                        <a href="#">Privacy policy</a>
-                        <a href="#">Terms & Conditions</a>
-                        <p>&#9400; 2019</p>
-                        <p>web design by <a href="www.danielledoty.com"> ddoty</a></p>
-                        
-
-
-
-
-
-                    </div>
-                        <div class="" id="footerColumnThree">
-                            <b>
-                                <p>Social</p>
-                            </b>
-                            <a href="https://www.facebook.com/highbrowscottsdale" target="_blank">
-                                <img src="../assets/images/facebookWhite.png" alt="facebook" height="50px">
-                            </a>
-                            <a href="https://www.instagram.com/highbrowscottsdale/" target="_blank">
-                                <img src="../assets/images/instagramWhite.png" alt="instagram" height="50px">
-                            </a>
-                            <a href="https://www.yelp.com/biz/high-brow-waxing-and-skin-scottsdale-3" target="_blank">
-                                <img src="../assets/images/yelpWhite.png" alt="yelp" height="50px">
-                            </a>
+            </section>
+            </section>
+            <section>
+                <div class="container5">
+                    <h2 id="testimonialsTitle">Testimonials</h2>
+                    <div id="testimonialsText">
+                        <div id="testimonial1">
+                            <p>"The best of the best, the only eyebrow specialist I trust! She makes them beautiful and
+                                perfect every single time!"</p>
+                                <p>- Laila C</p>
+                            <img src="../assets/images/iconmonstr-quote-8-240.png" alt="quote" height="75px">
+                        </div>
+                        <div id="testimonial2">
+                            <p>"LOVE LORI! Seriously been going to her for 3 years!! So awesome, funny, genuine, cares about them brows and you! Very business oriented but feels like a friend. And the brows, never looked better :))))"</p>
+                                    <p>- Ashley C</p>
+                                    <img src="../assets/images/iconmonstr-quote-8-240.png" alt="quote" height="75px">
+                        </div>
+                        <div id="testimonial3">
+                            <p>"I've been going to Lori for my brows for almost 2 years! What a miracle worker she is. I will never let anyone else near my eyebrows."</p>
+                                    <p>- Nicole S</p>
+                                    <img src="../assets/images/iconmonstr-quote-8-240.png" alt="quote" height="75px">
+                        </div>
+                        <div id="testimonial4">
+                                <p>"I have been coming to this awesome chick for years and I couldn't be happier. Best brows in town, highly recommend!! You will not be disappointed!!"</p>
+                                        <p>- Amber L</p>
+                                        <img src="../assets/images/iconmonstr-quote-8-240.png" alt="quote" height="75px">
                         </div>
                     </div>
+                    <a href="../pages/testimonials.html">
+                        <button type="button" id="testimonialsButton">See more testimonials here</button></a>
+                </div>
+            </section>
+            <section>
+                <div class="container6">
+                    <div id="qaSide">
+                        <h2 id="qaTitle">Questions & Answers</h2>
+                        <div id="qaText">
+                            <p>lorem</p>
+                            <p>lorem</p>
+                            <p>lorem</p>
+                        </div>
+                        <a href="../pages/qa.html">
+                            <button type="button" id="qaButton">Get Your Questions Answered</button></a>
+                    </div>
+                    <div id="learnSide">
+                        <h2 id="learnTitle">Learn</h2>
+                        <div id="learnText">
+                            <p>lorem</p>
+                            <p>lorem</p>
+                            <p>lorem</p>
+                        </div>
+                        <a href="../pages/learn.html">
+                            <button type="button" id="learnButton">Learn More Here</button></a>
+                    </div>
+                </div>
+            </section>
+            <section class="parallax">
+                <div class="bg__break4">
+                    <div class="capture4">
+                        <h3>Shop</h3>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <button type="button" id="shopButton">Visit our shop</button></a>
+                    </div>
+                </div>
+            </section>
+            </section>
+            <section>
+                <div class="container7">
+                    <div id="formsSide">
+                        <h2 id="lorem">Forms</h2>
+                        <div id="">
+                            <p>lorem</p>
+                            <p>lorem</p>
+                            <p>lorem</p>
+                        </div>
+                        <a href="../pages/forms.html">
+                            <button type="button" id="qaButton">Find Forms Here</button></a>
+                    </div>
+                    <div id="contactSide">
+                        <h2 id="lorem">Contact Us</h2>
+                        <div id="">
+                            <p>lorem</p>
+                            <p>lorem</p>
+                            <p>lorem</p>
+                        </div>
+                        <a href="../pages/learn.html">
+                            <button type="button" id="learnButton">Get in touch</button></a>
+                    </div>
+                </div>
+            </section>
+            <section>
+    </div>
+    <div class="container8">
+        <div class="footer" id="footer">
+            <div class="" id="footerColumnOne">
+                <b>
+                    <p>Sitemap</p>
+                </b>
+                <a href="../pages/main.html">Home</a>
+
+                <a href="../pages/about.html">About</a>
+
+                <a href="../pages/services.html">Services</a>
+
+                <a href="../pages/gallery.html">Gallery</a>
+
+                <a href="../pages/testimonials.html">Testimonials</a>
+
+                <a href="../pages/qa.html">Questions & Answers</a>
+
+                <a href="../pages/learn.html">Learn</a>
+
+                <a href="../pages/shop.html">Shop</a>
+
+                <a href="../pages/forms.html">Forms</a>
+
+                <a href="../pages/contact.html">Contact</a>
+
+            </div>
+            <div class="" id="footerColumnTwo">
+                <b>
+                    <p>Company</p>
+                </b>
+                <a href="../pages/contact.html">Contact us</a>
+                <a href="#">Careers</a>
+                <a href="#">Salon</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms & Conditions</a>
+                <p>&#9400; 2019</p>
+                <p>web design by <a href="www.danielledoty.com"> ddoty</a></p>
+            </div>
+            <div class="" id="footerColumnThree">
+                <b>
+                    <p>Social</p>
+                </b>
+                <a href="https://www.facebook.com/highbrowscottsdale" target="_blank">
+                    <img src="../assets/images/facebookWhite.png" alt="facebook" height="50px">
+                </a>
+                <a href="https://www.instagram.com/highbrowscottsdale/" target="_blank">
+                    <img src="../assets/images/instagramWhite.png" alt="instagram" height="50px">
+                </a>
+                <a href="https://www.yelp.com/biz/high-brow-waxing-and-skin-scottsdale-3" target="_blank">
+                    <img src="../assets/images/yelpWhite.png" alt="yelp" height="50px">
+                </a>
+            </div>
+        </div>
         </section>
-    </article>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src="../assets/javascript/app.js" type="text/javascript"></script>
+        </article>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script src="../assets/javascript/app.js" type="text/javascript"></script>
 </body>
 
 </html>
