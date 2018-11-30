@@ -260,6 +260,55 @@ article .container4 {
 text-align: center;
 padding-top: 20px;
 }
+article .container9 {
+  text-align: center;
+  padding-top: 20px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  }
+  #specialLeftSide{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #specialCenterSide{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #specialRightSide{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #SpecialsAboutButton{
+    background-color: #333;
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 50px;
+  }
+  #specialsBookingButton{
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+  #microblading{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    padding-bottom: 20px;
+  }
 article .container5 {
 text-align: center;
 padding-top: 20px;
@@ -504,3 +553,27 @@ text-shadow:
   -.15px .15px 0 white,
    .15px .15px 0 white;
 }
+#myModal{
+  
+}
+.modal-header{
+background-image: url("../images/gradient4.png");
+background-size: cover;
+background-repeat: no-repeat;
+color: white;
+display: flex; 
+flex-direction: column;
+}
+#modalButton{
+  background-color: transparent;
+  border-color: transparent;
+  border-style: none;
+  width:200px;
+  box-shadow: 0 1px 0.125em #333;
+}
+#modalCloseButton{
+  position: relative;
+  right: 70px;
+  top: 15px
+}
+

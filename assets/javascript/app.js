@@ -1,3 +1,4 @@
+
 // collaspible nav
 // This code dosen't works on Firefox and IE and works on other browesers.
 $(document).ready(function () {
@@ -24,7 +25,7 @@ $(document).ready(function () {
 
 });
 
-// sticky nav
+// // sticky nav
 $(document).ready(function() {
     var windowH = $(window).height();
     var stickToBot = windowH - $('#menu').outerHeight(true);
@@ -40,3 +41,18 @@ $(document).ready(function() {
         }
     });
 });​
+
+
+// employee profiles about page
+// $(document).ready(function () {
+//     $("#loriText").hide()
+//     $("#piperText").hide()
+  
+//     $("#loriButton").click(function(){
+//             $("#loriText").toggle()
+//         });
+//     $("#piperButton").click(function(){
+//             $("#piperText").toggle()
+//         });
+// });
+
