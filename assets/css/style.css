@@ -495,7 +495,7 @@ transform: rotate(0deg);
 transition: .25s ease-in-out;
 }
 .animated-icon1 span {
-background: #9b242e;
+background: #8a1112;
 }
 .animated-icon1 span:nth-child(1) {
 top: 0px;
@@ -563,6 +563,7 @@ background-repeat: no-repeat;
 color: white;
 display: flex; 
 flex-direction: column;
+text-align: center;
 }
 #modalButton{
   background-color: transparent;

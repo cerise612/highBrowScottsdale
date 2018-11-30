@@ -112,7 +112,7 @@ body, html {
     transition: .25s ease-in-out;
     }
     .animated-icon1 span {
-    background: #9b242e;
+    background: #8a1112;
     }
     .animated-icon1 span:nth-child(1) {
     top: 0px;
@@ -286,4 +286,24 @@ body, html {
     border-style: none;
     box-shadow: 0 transparent; 
     width:200px
+}
+.parallax .bg__break2 {
+  height: 500px;
+  box-shadow: inset 0 0 1em #111;
+  background-image: url("../images/gradient2.png");
+}
+  
+  .parallax .capture2 {
+  /* float: right; */
+  width: 500px;
+  height: 200px;
+  padding: 1em;
+  margin: -1.5em 1em 0 0;
+  text-indent: 0;
+  background: rgba(243, 243, 243, 0.75);
+  box-shadow: 0 1px 0.125em #333; 
+  opacity: .6; 
+  position: relative;
+  top: 250px;
+  left: 150px;
 }
