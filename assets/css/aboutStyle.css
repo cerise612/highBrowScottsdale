@@ -204,6 +204,9 @@ body, html {
     height: 900px;
     box-shadow: inset 0 0 1em #111;
     background-image: url("../images/beauty-salon-3277314.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .parallax .capture1 {
     width: 1000px;
@@ -214,14 +217,11 @@ body, html {
     background: rgba(243, 243, 243, 0.75);
     box-shadow: 0 1px 0.125em #333; 
     opacity: .85; 
-    position: relative;
-    top: 250px;
-    left: 400px;
   }
   #arrow{
     position: relative;
-    top: 430px;
-    left: 850px;  
+    top: 410px;
+    right: 575px;  
   }
 /* Section 2 about Staff */
   article .container1 {
@@ -291,11 +291,13 @@ body, html {
   height: 500px;
   box-shadow: inset 0 0 1em #111;
   background-image: url("../images/gradient2.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   
   .parallax .capture2 {
-  /* float: right; */
-  width: 500px;
+  width: 1000px;
   height: 200px;
   padding: 1em;
   margin: -1.5em 1em 0 0;
@@ -303,7 +305,16 @@ body, html {
   background: rgba(243, 243, 243, 0.75);
   box-shadow: 0 1px 0.125em #333; 
   opacity: .6; 
-  position: relative;
-  top: 250px;
-  left: 150px;
+  text-align: center;
+
+}
+#careerTitle{
+  margin-top: 20px;
+text-align: center;
+}
+#careerText{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
