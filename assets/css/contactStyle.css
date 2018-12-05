@@ -246,10 +246,6 @@ body, html {
     grid-row-start: 1;
     grid-row-end: 1;
   }
-  article .container2 {
-    width: 600px;
-    margin: 0 auto;
-  }
   .parallax .bg__break2 {
     height: 350px;
     box-shadow: inset 0 0 1em #111;
@@ -278,3 +274,27 @@ body, html {
   #hours2{
     margin-top: 25px;
   }
+  article .container2 {
+    height: 500px;
+    width: 1000px;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 100%;
+    text-align: left;
+  }
+  #directionsDiv{
+    grid-column-start:1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #map {
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 400px;  /* The height is 400 pixels */
+    width: 400px;  /* The width is the width of the web page */
+   }
