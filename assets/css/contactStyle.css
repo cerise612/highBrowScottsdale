@@ -193,9 +193,9 @@ body, html {
     background: rgba(243, 243, 243, 0.75);
     box-shadow: 0 1px 0.125em #333; 
     opacity: .6; 
-    position: relative;
+    /* position: relative;
     top: 250px;
-    left: 150px;
+    left: 150px; */
   }
   
     /*container template*/
@@ -203,23 +203,78 @@ body, html {
     width: 600px;
     margin: 0 auto;
   }
+
+  article .container1 {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
   .parallax .bg__break1 {
-    height: 400px;
+    height: 300px;
     box-shadow: inset 0 0 1em #111;
     background-image: url("../images/gradient3.png");
    background-size: contain;
+   /* display: flex;
+   flex-direction: column;
+   justify-content: center; */
   }
   .parallax .capture1 {
-    /* float: right; */
-    width: 500px;
     height: 200px;
     padding: 1em;
-    margin: -1.5em 1em 0 0;
     text-indent: 0;
-    /* background: rgba(243, 243, 243, 0.75);
-    box-shadow: 0 1px 0.125em #333; 
-    opacity: .6;  */
-    /* position: relative;
-    top: 250px;
-    left: 150px; */
+    margin-left: 150px;
+    color: white;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+  }
+  #helloSection{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #visitSection{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #socialSection{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  article .container2 {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .parallax .bg__break2 {
+    height: 350px;
+    box-shadow: inset 0 0 1em #111;
+    background-image: url("../images/gradient2.png");
+   background-size: contain;
+   text-align: center;
+   display: flex;
+   justify-content: center; 
+  }
+  .parallax .capture2 {
+    height: 200px;
+    padding: 1em;
+    text-indent: 0;
+    margin-left: 150px;
+    color: white;
+    width: 350px;
+  }
+  #hours1{
+    margin-top: 25px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    padding-top: 5px;
+
+  }
+  #hours2{
+    margin-top: 25px;
   }
