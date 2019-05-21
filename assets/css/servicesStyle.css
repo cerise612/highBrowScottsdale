@@ -204,7 +204,93 @@ body, html {
     margin: 0 auto;
   }
   .parallax .bg__break1 {
-    height: 900px;
+    height: 300px;
     box-shadow: inset 0 0 1em #111;
-    background-image: url("../images/beauty-salon-3277314.jpg");
+    background-image: url("../images/gradient2.png");
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+  }
+  .parallax .capture1 {
+    width: 300px;
+    height: 150px;
+    padding: 1em;
+    margin: -1.5em 1em 0 0;
+    text-indent: 0;
+    background: rgba(243, 243, 243, 0.75);
+    box-shadow: 0 1px 0.125em #333; 
+    opacity: .6; 
+    align-self: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  article .container1 {
+    height: 1000px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  
+  }
+ #Text{
+   width: 500px;
+   /* align-self: center; */
+  display: grid;
+  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+ }
+  #fWax{
+    grid-column-start: col2-start;
+    grid-column-end: col2-end;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    position: relative;
+    right: 15vw;
+  }
+  #bWax{
+    grid-column-start: col3-start;
+    grid-column-end: col3-end;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    position: relative;
+    right: 10vw;
+  }
+  #micro{
+    grid-column-start: col2-start;
+    grid-column-end: col2-end;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    position: relative;
+    right: 3vw;
+  }
+  #skin{
+    grid-column-start: col3-start;
+    grid-column-end: col3-end;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    position: relative;
+    left: 3vw;
+  }
+  #makeup{
+    grid-column-start: col2-start;
+    grid-column-end: col2-end;
+    grid-row-start: 3;
+    grid-row-end: span 3;
+    position: relative;
+    left: 10vw;
+  }
+  #lash{
+    grid-column-start: col3-start;
+    grid-column-end: col3-end;
+    grid-row-start: 3;
+    grid-row-end: span 3;
+    position: relative;
+    left: 15vw;
   }

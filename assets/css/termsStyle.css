@@ -197,12 +197,6 @@ body, html {
     top: 250px;
     left: 150px;
   }
-  
-    /*container template*/
-    article .container {
-    width: 600px;
-    margin: 0 auto;
-  }
   .parallax .bg__break1 {
     height: 300px;
     box-shadow: inset 0 0 1em #111;
@@ -210,10 +204,15 @@ body, html {
     display: flex;
     align-items: center; 
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
+  }
+    /*container template*/
+    article .container {
+    width: 600px;
+    margin: 0 auto;
   }
   .parallax .capture1 {
-    width: 300px;
+    width: 20vw;
     height: 150px;
     padding: 1em;
     margin: -1.5em 1em 0 0;
@@ -229,4 +228,117 @@ body, html {
     align-items: center;
     justify-content: center;
   }
-  
+  article .container1 {
+    /* height: 1000px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  a.formLink {
+   display: flex;
+   flex-direction: column;
+color: black;
+text-align: center;
+  }
+  .footerSocial{
+    height: 50px;
+  }
+
+
+  /*--------------------------------------------------------
+Responsive elements
+--------------------------------------------------------*/
+
+/* Small devices (landscape phones, less than 812px) */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .container1{
+      width: 70vw;
+      margin-left: 10vw;
+     
+    }
+    .container1Privacy{
+      width: 70vw;
+      
+    }
+        .capture1{
+          min-width: 50vw;
+        }
+        .footerSocial{
+          /* height: 20px; */
+          display: flex;
+          flex-direction: column;
+          margin-left: 10vw;
+          margin-bottom: 2vh;
+        }
+  }
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+  .container1{
+    width: 70vw;
+    margin-left: 10vw;
+   
+  }
+  .container1Privacy{
+    width: 70vw;
+    margin-left: 10vw;
+    
+  }
+      .capture1{
+        min-width: 50vw;
+      }
+}
+
+/* Medium devices (tablets, less than 1366px) */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .container1{
+    width: 70vw;
+    margin-left: 10vw;
+   
+  }
+  .container1Privacy{
+    width: 70vw;
+    margin-left: 20vw;
+    
+  }
+      .capture1{
+        min-width: 50vw;
+      }
+}
+/* Medium devices (tablets, less than 1366px) */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .container1{
+    width: 70vw;
+    margin-left: 10vw;
+   
+  }
+  .container1Privacy{
+    width: 70vw;
+    margin-left: 20vw;
+    
+  }
+      .capture1{
+        min-width: 50vw;
+      }
+}
+
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* Extra large devices (large desktops) */
+/* No media query since the extra-large breakpoint has no upper bound on its width */
