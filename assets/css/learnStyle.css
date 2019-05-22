@@ -229,4 +229,95 @@ body, html {
     align-items: center;
     justify-content: center;
   }
+  .footerSocial{
+    height: 50px;
+  }
+  /*--------------------------------------------------------
+Responsive elements
+--------------------------------------------------------*/
+
+/* Small devices (landscape phones, less than 812px) */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+  article .container1{
+    width: 70vw;
+    margin-left: 10vw;
+   
+  }
+  .parallax .capture1{
+        min-width: 50vw;
+      }
+      .footerSocial{
+        /* height: 20px; */
+        display: flex;
+        flex-direction: column;
+        margin-left: 10vw;
+        margin-bottom: 2vh;
+      }
+      article .parallax .bg__break1 {
+        /* height: auto; */
+     width: 100vw;
+     min-width: 312px;
+     max-width: 812px;
+      }
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+  article .container1{
+    width: 70vw;
+    margin-left: 10vw;
+   
+  }
+  .parallax .capture1{
+        min-width: 50vw;
+      }
+      .footerSocial{
+        /* height: 20px; */
+        display: flex;
+        flex-direction: column;
+        margin-left: 10vw;
+        margin-bottom: 2vh;
+      }
+      article .parallax .bg__break1 {
+        /* height: auto; */
+     width: 100vw;
+     min-width: 312px;
+     max-width: 812px;
+      }
+}
+/* Medium devices (tablets, less than 1366px) */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  article .container1{
+    width: 70vw;
+    margin-left: 10vw;
+   
+  }
+  .parallax .capture1{
+        min-width: 50vw;
+      }
+}
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  article .container1{
+    width: 70vw;
+    margin-left: 10vw;
+   
+  }
+  .parallax .capture1{
+        min-width: 50vw;
+      } 
+}
   
