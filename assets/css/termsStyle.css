@@ -255,13 +255,14 @@ Responsive elements
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    .container1{
+    article .container1{
       width: 70vw;
       margin-left: 10vw;
      
     }
-    .container1Privacy{
+    article .container1Privacy{
       width: 70vw;
+      margin-left: 15vw;
       
     }
         .capture1{
@@ -282,16 +283,19 @@ and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) { 
   .container1{
     width: 70vw;
-    margin-left: 10vw;
+    margin-left: 4vw;
    
   }
   .container1Privacy{
-    width: 70vw;
-    margin-left: 10vw;
+    width: 80vw;
+    /* margin-left: 4vw; */
     
   }
       .capture1{
         min-width: 50vw;
+      }
+      #text{
+
       }
 }
 
@@ -303,7 +307,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
   .container1{
     width: 70vw;
-    margin-left: 10vw;
+    margin-left: 15vw;
    
   }
   .container1Privacy{
@@ -323,12 +327,16 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
   .container1{
     width: 70vw;
-    margin-left: 10vw;
+    margin-left: 15vw;
    
   }
   .container1Privacy{
     width: 70vw;
-    margin-left: 20vw;
+    margin-left: 15vw;
+    
+  }
+  #text a:link{
+    color: black;
     
   }
       .capture1{

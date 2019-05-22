@@ -1,85 +1,104 @@
 /* whole site standard */
-body, html {
+body,
+html {
     height: 100%;
+    max-width: 100vw;
     font-family: 'Open Sans Condensed', sans-serif;
     margin: 0;
     padding: 0;
-  }
-  body {
-  display: flex;
-  flex-direction: column;
-  }
-  .content {
-  flex: 1 0 auto;
-  }
-  /*selects all divs with bg__ in the paralax class. I think this is where the magic is*/
-  .parallax [class*="bg__"] {
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+/*selects all divs with bg__ in the paralax class. I think this is where the magic is*/
+.parallax [class*="bg__"] {
     position: relative;
     height: 50vh;
     text-indent: -9999px;
-    background-attachment: fixed;  /*this may be the key*/
+    background-attachment: fixed;
+    /*this may be the key*/
     background-position: top center;
     background-size: cover;
-  }
-  /*selects every second child and makes it an inset box, in this case bar and baz*/
-  .parallax [class*="bg__"]:nth-child(2n) {
+}
+
+/*selects every second child and makes it an inset box, in this case bar and baz*/
+.parallax [class*="bg__"]:nth-child(2n) {
     box-shadow: inset 0 0 1em #111;
-  }
-  /* footer */
-  .footer {
+}
+
+/* footer */
+.footer {
     flex-shrink: 0;
     background-color: #333;
     color: white;
-    }
-    #footer{
+}
+
+#footer {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 100%;
     width: 100%;
-    }
-    #footerColumnOne{
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 1;
-      grid-row-end: 1;
-    }
-    #footerColumnTwo{
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 1;
-    }
-    #footerColumnThree{
-      padding-top: 20px;
-      text-align: center;
-      grid-column-start: 3;
-      grid-column-end: 4;
-      grid-row-start: 1;
-      grid-row-end: 1;
-    }
-    /* links */
-    a:active {
-      color: white;
-    }
-    a:link {
-      color: white;
-    }
-    a:visited {
-      color: white;
-    }
-    a:hover {
-      color: white;
-    }
-    /* navbar */
-    .animated-icon1, .animated-icon3, .animated-icon4 {
+}
+
+#footerColumnOne {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#footerColumnTwo {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#footerColumnThree {
+    padding-top: 20px;
+    text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+/* links */
+a:active {
+    color: white;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+/* navbar */
+.animated-icon1,
+.animated-icon3,
+.animated-icon4 {
     width: 30px;
     height: 20px;
     position: relative;
@@ -93,8 +112,11 @@ body, html {
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
-    }
-    .animated-icon1 span, .animated-icon3 span, .animated-icon4 span {
+}
+
+.animated-icon1 span,
+.animated-icon3 span,
+.animated-icon4 span {
     display: block;
     position: absolute;
     height: 3px;
@@ -110,76 +132,94 @@ body, html {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
-    }
-    .animated-icon1 span {
+}
+
+.animated-icon1 span {
     background: #8a1112;
-    }
-    .animated-icon1 span:nth-child(1) {
+}
+
+.animated-icon1 span:nth-child(1) {
     top: 0px;
-    }
-    .animated-icon1 span:nth-child(2) {
+}
+
+.animated-icon1 span:nth-child(2) {
     top: 10px;
-    }
-    .animated-icon1 span:nth-child(3) {
+}
+
+.animated-icon1 span:nth-child(3) {
     top: 20px;
-    }
-    .animated-icon1.open span:nth-child(1) {
+}
+
+.animated-icon1.open span:nth-child(1) {
     top: 11px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg);
-    }
-    .animated-icon1.open span:nth-child(2) {
+}
+
+.animated-icon1.open span:nth-child(2) {
     opacity: 0;
     left: -60px;
-    }
-    .animated-icon1.open span:nth-child(3) {
+}
+
+.animated-icon1.open span:nth-child(3) {
     top: 11px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
-    }
-    #linkList{
-      float: right;
-      text-align: right;
-    }
-    #navbar{
-      background-color: transparent;
-    }
-    #menu{
-      background-color: transparent;
-    }
-    #brand{
-      color: #36271a;
-    text-shadow:
-     -.25px -.25px 0 white,  
-      .25px -.25px 0 white,
-      -.25px .25px 0 white,
-       .25px .25px 0 white;
-    }
-    #tagLine2{
-      font-size: x-large;
-    }
-    .nav-link{
-      color: #36271a;
-    text-shadow:
-    -.15px -.15px 0 white,  
-      .15px -.15px 0 white,
-      -.15px .15px 0 white,
-       .15px .15px 0 white;
-    }
+}
 
-  /* templates */
-  /*parallax template*/
-  .parallax .bg__break {
+.footerSocial {
+    height: 50px;
+}
+
+#linkList {
+    float: right;
+    text-align: right;
+}
+
+#navbar {
+    background-color: transparent;
+}
+
+#menu {
+    background-color: transparent;
+}
+
+#brand {
+    color: #36271a;
+    text-shadow:
+        -.25px -.25px 0 white,
+        .25px -.25px 0 white,
+        -.25px .25px 0 white,
+        .25px .25px 0 white;
+}
+
+#tagLine2 {
+    font-size: x-large;
+}
+
+.nav-link {
+    color: #36271a;
+    text-shadow:
+        -.15px -.15px 0 white,
+        .15px -.15px 0 white,
+        -.15px .15px 0 white,
+        .15px .15px 0 white;
+}
+
+/* templates */
+/*parallax template*/
+.parallax .bg__break {
     height: 900px;
     box-shadow: inset 0 0 1em #111;
     background-image: url("../images/woman-1281830.jpg");
-  }
-    /*text box template*/
-    .parallax .capture {
+}
+
+/*text box template*/
+.parallax .capture {
     /* float: right; */
     width: 500px;
     height: 200px;
@@ -187,134 +227,461 @@ body, html {
     margin: -1.5em 1em 0 0;
     text-indent: 0;
     background: rgba(243, 243, 243, 0.75);
-    box-shadow: 0 1px 0.125em #333; 
-    opacity: .6; 
+    box-shadow: 0 1px 0.125em #333;
+    opacity: .6;
     position: relative;
     top: 250px;
     left: 150px;
-  }
-  
-    /*container template*/
-    article .container {
+}
+
+/*container template*/
+article .container {
     width: 600px;
     margin: 0 auto;
-  }
-  /* Section 1 about company */
-  .parallax .bg__break1 {
-    height: 900px;
+}
+
+/* Section 1 about company */
+.parallax .bg__break1 {
+    height: 30vh;
+    width: 100vw;
     box-shadow: inset 0 0 1em #111;
-    background-image: url("https://cdn.biltmorehotel.com/assets/img/spa/miami-spa/picture/the-all-new-biltmore-spa-miami.jpg");
+    background-image: url("../images/gradient2.png");
     display: flex;
-    justify-content: center;
     align-items: center;
-  }
-  .parallax .capture1 {
-    width: 1000px;
-    height: 400px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.parallax .capture1 {
+    width: 20vw;
+    height: 150px;
     padding: 1em;
     margin: -1.5em 1em 0 0;
     text-indent: 0;
     background: rgba(243, 243, 243, 0.75);
-    box-shadow: 0 1px 0.125em #333; 
-    opacity: .85; 
-  }
-  #arrow{
-    position: relative;
-    top: 410px;
-    right: 575px;  
-  }
+    box-shadow: 0 1px 0.125em #333;
+    opacity: .6;
+    align-self: center;
+    margin-bottom: 50px;
+    margin-top: 52vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Section 2 about Staff */
-  article .container1 {
+article .container1 {
     margin: 0 auto;
     height: 500px;
-  }
-  #peopleTitle{
-      padding-left: 100px;
-  }
-  #peopleDiv{
+    text-align: center;
+}
+
+#welcomeText {
+    width: 70vw;
+    margin-top: 20vh;
+    margin-left: 15vw;
+}
+
+#peopleTitle {
+    padding-left: 100px;
+}
+
+#peopleDiv {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 70% 30%;
     text-align: center;
     width: 100%;
     height: 100%;
-  }
-  #loriImage{
+}
+
+#loriImage {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1;
-  }
-  #loriText{
+}
+
+#loriText {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
     margin-left: 100px;
     margin-right: 100px;
-} 
-  #piperImage{
+    margin-top: 5vh;
+}
+
+#piperImage {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 1;
 }
 
- #piperText{
+#piperText {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
     margin-left: 100px;
     margin-right: 100px;
+    margin-top: 5vh;
 }
-#loriButton{
+
+#loriButton {
     background-color: transparent;
     border-color: transparent;
     box-shadow: 0 transparent;
 }
 
-#piperButton{
+#piperButton {
     background-color: transparent;
     border-color: transparent;
     border-style: none;
     box-shadow: 0 transparent;
 }
-.button:active{
+
+.button:active {
     background-color: transparent;
     border-color: transparent;
     border-style: none;
-    box-shadow: 0 transparent; 
-    width:200px
+    box-shadow: 0 transparent;
+    width: 200px
 }
+
 .parallax .bg__break2 {
-  height: 500px;
-  box-shadow: inset 0 0 1em #111;
-  background-image: url("../images/gradient2.png");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 500px;
+    box-shadow: inset 0 0 1em #111;
+    background-image: url("../images/gradient2.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-  
-  .parallax .capture2 {
-  width: 1000px;
-  height: 200px;
-  padding: 1em;
-  margin: -1.5em 1em 0 0;
-  text-indent: 0;
-  background: rgba(243, 243, 243, 0.75);
-  box-shadow: 0 1px 0.125em #333; 
-  opacity: .6; 
-  text-align: center;
+
+.parallax .capture2 {
+    width: 1000px;
+    height: 200px;
+    padding: 1em;
+    margin: -1.5em 1em 0 0;
+    text-indent: 0;
+    background: rgba(243, 243, 243, 0.75);
+    box-shadow: 0 1px 0.125em #333;
+    opacity: .6;
+    text-align: center;
+    padding-top: 5vh;
 
 }
-#careerTitle{
-  margin-top: 20px;
-text-align: center;
+
+#careerTitle {
+    margin-top: 20px;
+    text-align: center;
 }
-#careerText{
-  text-align: center;
-  margin-bottom: 20px;
-  margin-left: 150px;
-  margin-right: 150px;
+
+#careerText {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
+
+.parallax .bg__break3 {
+    height: 500px;
+    box-shadow: inset 0 0 1em #111;
+    background-image: url("../images/gradient2.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax .capture3 {
+    width: 1000px;
+    height: 300px;
+    padding: 1em;
+    margin: -1.5em 1em 0 0;
+    text-indent: 0;
+    background: rgba(243, 243, 243, 0.75);
+    box-shadow: 0 1px 0.125em #333;
+    opacity: .6;
+    text-align: center;
+    padding-top: 5vh;
+
+}
+
+/*--------------------------------------------------------
+Responsive elements
+--------------------------------------------------------*/
+
+/* Small devices (landscape phones, less than 812px) */
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    article {
+        width: 100vw;
+        max-width: 812px;
+    }
+
+    #footer {
+        max-width: 812px;
+        width: 100vw;
+    }
+
+    .parallax .bg__break1 {
+        background-size: contain;
+        height: 20vh;
+
+    }
+
+    .parallax .capture1 {
+        width: 50vw;
+        margin-top: 5vh;
+    }
+
+    article .container1 {
+        width: 70vw;
+        margin-left: 10vw;
+        height: 40vh;
+
+    }
+
+    .parallax .bg__break2 {
+        background-size: contain;
+        height: 40vh;
+    }
+
+    .parallax .capture2 {
+        width: 75vw;
+        margin-left: 2vh;
+    }
+
+    #welcomeText {
+        margin-left: 0vw;
+        margin-top: 0vh;
+    }
+
+    .footerSocial {
+        /* height: 20px; */
+        display: flex;
+        flex-direction: column;
+        margin-left: 10vw;
+        margin-bottom: 2vh;
+    }
+
+    article .container2 {
+        height: 60vh;
+
+    }
+
+    #peopleDiv {
+        height: 20vh;
+    }
+
+    #loriSection {
+        height: 5vh;
+    }
+
+    #loriText {
+        margin-top: 7vh;
+        width: 90vw;
+        margin-left: 5vw;
+    }
+
+    #loriImage {
+        width: 30vw;
+        height: 15vh;
+    }
+
+    #piperSection {
+        height: 10vh;
+    }
+
+    #piperImage {
+        width: 30vw;
+        height: 15vh;
+    }
+
+    #piperText {
+        margin-top: 7vh;
+        width: 90vw;
+        margin-left: 5vw;
+    }
+
+    .parallax .bg__break3 {
+        background-size: contain;
+        height: 77vh;
+
+    }
+
+    .parallax .capture3 {
+        width: 75vw;
+        height: 65vh;
+        margin-top: 3vh;
+        margin-left: 2vw;
+    }
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+    .parallax .bg__break1 {
+        background-size: contain;
+        height: 40vh;
+
+    }
+
+    .parallax .capture1 {
+        width: 50vw;
+        margin-top: 15vh;
+    }
+
+    article .container1 {
+        height: 50vh;
+
+    }
+
+    #welcomeText {
+        margin-top: 0vh;
+        margin-left: 5vw;
+    }
+
+    .parallax .bg__break2 {
+        background-size: contain;
+        height: 70vh;
+
+    }
+
+    .parallax .capture2 {
+        width: 50vw;
+        margin-top: 2vh;
+    }
+
+    .parallax .bg__break3 {
+        background-size: contain;
+        height: 100vh;
+
+    }
+
+    .parallax .capture3 {
+        width: 70vw;
+        margin-top: 2vh;
+    }
+}
+
+/* Medium devices (tablets, less than 1366px) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .parallax .bg__break1 {
+        background-size: contain;
+        height: 20vh;
+
+    }
+
+    .parallax .capture1 {
+        width: 50vw;
+        margin-top: 4vh;
+    }
+
+    article .container1 {
+        height: 20vh;
+
+    }
+
+    #welcomeText {
+        margin-top: 0vh;
+        margin-left: 15vw;
+    }
+
+    .parallax .bg__break2 {
+        background-size: contain;
+        height: 40vh;
+
+    }
+
+    .parallax .capture2 {
+        width: 50vw;
+        margin-top: 0vh;
+    }
+
+    #loriText {
+        position: relative;
+        bottom: 10vh;
+    }
+
+    #piperText {
+        position: relative;
+        bottom: 10vh;
+    }
+
+    #peopleDiv {
+        height: 50vh;
+    }
+
+    .parallax .bg__break3 {
+        background-size: contain;
+        height: 50vh;
+
+    }
+
+    .parallax .capture3 {
+        width: 90vw;
+        margin-top: 0vh;
+    }
+}
+
+/* Medium devices (tablets, less than 1366px) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .parallax .bg__break1 {
+        background-size: contain;
+        height: 20vh;
+
+    }
+
+    .parallax .capture1 {
+        width: 50vw;
+        margin-top: 4vh;
+    }
+
+    article .container1 {
+        height: 20vh;
+
+    }
+
+    #welcomeText {
+        margin-top: 0vh;
+        margin-left: 15vw;
+    }
+
+    .parallax .bg__break2 {
+        background-size: contain;
+        height: 40vh;
+
+    }
+
+    .parallax .capture2 {
+        width: 50vw;
+        margin-top: 0vh;
+    }
+    #peopleDiv {
+        height: 60vh;
+    }
+
+    .parallax .bg__break3 {
+        background-size: contain;
+        height: 50vh;
+
+    }
+
+    .parallax .capture3 {
+        width: 90vw;
+        margin-top: 0vh;
+    }
+}
+
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* Extra large devices (large desktops) */
+/* No media query since the extra-large breakpoint has no upper bound on its width */

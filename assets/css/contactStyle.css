@@ -207,6 +207,7 @@ body, html {
     width: 100vw;
     margin: 0 auto;
     text-align: center;
+    margin-top: 5vh;
   }
   .parallax .bg__break1 {
     height: 30vh;
@@ -288,6 +289,8 @@ body, html {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
   #map {
     grid-column-start:2;
@@ -300,6 +303,9 @@ body, html {
    .footerSocial{
     height: 50px;
    
+  }
+  .contactSocial{
+    height: 50px;
   }
    /*--------------------------------------------------------
 Responsive elements
@@ -314,6 +320,7 @@ and (orientation: portrait) {
   article.container1{
     width: 70vw;
     margin-left: 10vw;
+    margin-top: 2vh;
    
   }
   .parallax .bg__break1 {
@@ -351,7 +358,7 @@ and (orientation: portrait) {
        
       }
       #map{
-         width: 60vw;
+         width: 70vw;
         
       }
 }
@@ -361,22 +368,33 @@ and (max-device-width: 812px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) { 
   .parallax .bg__break1 {
-    height: 350px;
+    height: 300px;
    width: 100vw;
   }
-.container1{
+  article .container1{
   width: 70vw;
   margin-left: 10vw;
  
+ 
 }
-.container1Privacy{
-  width: 70vw;
-  margin-left: 10vw;
-  
-}
-    .capture1{
+
+.parallax .capture1{
       min-width: 50vw;
+      margin-left: 9vw;
+      padding-top: 15vh;
     }
+    #map{
+      width: 40vw;
+      height: 60vh;
+   }
+   article .container2{
+  height: 60vh;
+    margin-bottom: 10vw;
+   
+  }
+  .parallax #hc{
+  margin-top: 10vh;
+}
 }
 
 /* Medium devices (tablets, less than 1366px) */
@@ -385,18 +403,23 @@ and (min-device-width: 768px)
 and (max-device-width: 1366px) 
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
-.container1{
+  article  .container1{
   width: 70vw;
   margin-left: 10vw;
+  margin-top: 2vh;
  
 }
-.container1Privacy{
-  width: 70vw;
-  margin-left: 20vw;
-  
-}
-    .capture1{
+
+.parallax  .capture1{
       min-width: 50vw;
+      margin-left: 9vw;
+    }
+    .parallax .bg__break1 {
+      height: 250px;
+     width: 100vw;
+    }
+    .parallax .capture1{
+      padding-top: 2.5vh;
     }
 }
 /* Medium devices (tablets, less than 1366px) */
@@ -405,17 +428,13 @@ and (min-device-width: 768px)
 and (max-device-width: 1366px) 
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-.container1{
+  article  .container1{
   width: 70vw;
   margin-left: 10vw;
- 
+  margin-top: 2vh;
 }
-.container1Privacy{
-  width: 70vw;
-  margin-left: 20vw;
-  
-}
-    .capture1{
+
+.parallax   .capture1{
       min-width: 50vw;
     }
 }

@@ -588,16 +588,13 @@ Responsive elements
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    .container1{
+    article .container1{
       width: 70vw;
       margin-left: 10vw;
      
     }
-    .container1Privacy{
-      width: 70vw;
-      
-    }
-        .capture1{
+  
+    .parallax .capture1{
           min-width: 50vw;
         }
         .footerSocial{
@@ -613,17 +610,11 @@ and (min-device-width: 320px)
 and (max-device-width: 812px) 
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) { 
-  .container1{
+  article .container1{
     width: 70vw;
     margin-left: 10vw;
-   
   }
-  .container1Privacy{
-    width: 70vw;
-    margin-left: 10vw;
-    
-  }
-      .capture1{
+  .parallax .capture1{
         min-width: 50vw;
       }
 }
@@ -634,17 +625,13 @@ and (min-device-width: 768px)
 and (max-device-width: 1366px) 
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
-  .container1{
+  article .container1{
     width: 70vw;
     margin-left: 10vw;
    
   }
-  .container1Privacy{
-    width: 70vw;
-    margin-left: 20vw;
-    
-  }
-      .capture1{
+ 
+  .parallax .capture1{
         min-width: 50vw;
       }
 }
@@ -654,17 +641,13 @@ and (min-device-width: 768px)
 and (max-device-width: 1366px) 
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-  .container1{
+  article .container1{
     width: 70vw;
     margin-left: 10vw;
    
   }
-  .container1Privacy{
-    width: 70vw;
-    margin-left: 20vw;
-    
-  }
-      .capture1{
+ 
+  .parallax .capture1{
         min-width: 50vw;
       }
 }
