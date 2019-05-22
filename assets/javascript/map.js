@@ -206,7 +206,7 @@
             // The marker, positioned at High Brow Scottdale
             var marker = new google.maps.Marker({
                 position: highBrowScottsdale,
-                icon: URL="assets/icons2/favicon-32x32.png",
+                icon: URL="www.highbrowscottsdalassets/icons/favicon-32x32.pnge.com",
                 map: map
               });
 

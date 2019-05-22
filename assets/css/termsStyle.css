@@ -294,9 +294,7 @@ and (orientation: landscape) {
       .capture1{
         min-width: 50vw;
       }
-      #text{
 
-      }
 }
 
 /* Medium devices (tablets, less than 1366px) */
