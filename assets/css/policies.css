@@ -100,7 +100,8 @@ body, html {
   article .container1 {
     height:400px;
     background-size: cover; 
-    background-image: url("../../assets/images/gradient.png");
+background: rgb(98,79,3);
+background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
     color: white;
     text-align: center;
     font-size: x-large;
@@ -158,7 +159,8 @@ body, html {
   article .container3 {
     height:250px;
     background-size: cover; 
-    background-image: url("../../assets/images/gradient2.png");
+background: rgb(98,79,3);
+background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
     color: white;
     text-align: center;
     font-size: x-large;
@@ -313,7 +315,8 @@ body, html {
   text-align: center;
   padding-top: 20px;
   background-size: cover; 
-    background-image: url("../../assets/images/gradient3.png");
+background: rgb(98,79,3);
+background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
     color: white;
   }
   #testimonialTitle{

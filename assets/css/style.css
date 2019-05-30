@@ -1,218 +1,431 @@
-body, html {
-  height: 100%;
-  font-family: 'Open Sans Condensed', sans-serif;
-  margin: 0;
-  padding: 0;
+body,
+html {
+    height: 100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 body {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .content {
-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
+
 /*selects all divs with bg__ in the paralax class. I think this is where the magic is*/
 .parallax [class*="bg__"] {
-  position: relative;
-  height: 50vh;
-  text-indent: -9999px;
-  background-attachment: fixed;  /*this may be the key*/
-  background-position: top center;
-  background-size: cover;
+    position: relative;
+    height: 50vh;
+    text-indent: -9999px;
+    background-attachment: fixed;
+    /*this may be the key*/
+    background-position: top center;
+    background-size: cover;
 }
+
 /*selects every second child and makes it an inset box, in this case bar and baz*/
 .parallax [class*="bg__"]:nth-child(2n) {
-  box-shadow: inset 0 0 1em #111;
+    box-shadow: inset 0 0 1em #111;
 }
 
-/*parallax template*/
-.parallax .bg__break {
-  height: 900px;
-  box-shadow: inset 0 0 1em #111;
-  background-image: url("../assets/images/woman-1281830.jpg");
-}
-  /*text box template*/
-  .parallax .capture {
-  /* float: right; */
-  width: 500px;
-  height: 200px;
-  padding: 1em;
-  margin: -1.5em 1em 0 0;
-  text-indent: 0;
-  background: rgba(243, 243, 243, 0.75);
-  box-shadow: 0 1px 0.125em #333; 
-  opacity: .6; 
-  position: relative;
-  top: 250px;
-  left: 150px;
-}
 
-  /*container template*/
-  article .container {
-  width: 600px;
-  margin: 0 auto;
-}
 
 /*opening div*/
 .parallax .bg__break1 {
-  height: 900px;
-  box-shadow: inset 0 0 1em #111;
-  background-image: url("../../assets/images/woman-1281830.jpg");
+    height: 100vh;
+    box-shadow: inset 0 0 1em #111;
+    background-image: url("../../assets/images/woman-1281830.jpg");
 }
+
 /*title box in opening div*/
 .parallax .capture1 {
-  /* float: right; */
-  width: 500px;
-  height: 200px;
-  padding: 1em;
-  margin: -1.5em 1em 0 0;
-  text-indent: 0;
-  font-size: xx-large;
-  position: relative;
-  top: 250px;
-  left: 150px;
+    /* float: right; */
+    width: 500px;
+    height: 200px;
+    padding: 1em;
+    margin: -1.5em 1em 0 0;
+    text-indent: 0;
+    font-size: xx-large;
+    position: relative;
+    top: 250px;
+    left: 150px;
 }
-h1{
-  font-weight: bold;
+
+h1 {
+    font-weight: bold;
 }
-  /*break 2 following first paragraph*/
-  .parallax .bg__break2 {
-  height: 500px;
-  box-shadow: inset 0 0 1em #111;
-  background-image: url("../../assets/images/woman-1439909 copy.jpg");
+
+/*break 2 following first paragraph*/
+.parallax .bg__break2 {
+    height: 60vh;
+    box-shadow: inset 0 0 1em #111;
+    background-image: url("../../assets/images/woman-1439909 copy.jpg");
 }
- /*text box 2*/
- .parallax .capture2 {
-  /* float: right; */
-  width: 200px;
-  height: 100px;
-  padding: 1em;
-  margin: -1.5em 1em 0 0;
-  text-indent: 0;
-  background: rgba(243, 243, 243, 0.75);
-  box-shadow: 0 1px 0.125em #333;
-  opacity: .6;
-  text-align: center;
-  position: relative;
-  top: 250px;
-  left: 170px;
+
+/*text box 2*/
+.parallax .capture2 {
+    /* float: right; */
+    width: 200px;
+    height: 100px;
+    padding: 1em;
+    margin: -1.5em 1em 0 0;
+    text-indent: 0;
+    background: rgba(243, 243, 243, 0.75);
+    box-shadow: 0 1px 0.125em #333;
+    opacity: .6;
+    text-align: center;
+    position: relative;
+    top: 250px;
+    left: 170px;
 }
+
 article .container1 {
-  height:400px;
-  background-size: cover; 
-  background-image: url("../../assets/images/gradient.png");
-  color: white;
-  text-align: center;
-  font-size: x-large;
+    height: 400px;
+    background-size: cover;
+    background: rgb(98,79,3);
+    background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
+    color: white;
+    text-align: center;
+    font-size: x-large;
 }
-h2{
-  font-size: xx-large;
+
+h2 {
+    font-size: xx-large;
 }
+
 /*the rest is just formatting not related to the paralax class*/
-#arrow{
-  position: relative;
-  top: 550px;
-  left: 850px;
+#arrow {
+    position: relative;
+    top: 550px;
+    left: 850px;
 }
-#bookingTitle{
+
+#bookingTitle {
     padding-top: 20px;
 }
-#bookingText{
+
+#bookingText {
     margin-top: 20px;
 }
-#bookingButton{
-  background-color: transparent;
-  color: white;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 30px;
+
+#bookingButton {
+    background-color: transparent;
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
 }
+
 /* about div */
-#aboutButton{
-  background-color: transparent;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 30px;
+#aboutButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
 }
-#aboutDivLeftSide{
-  float: left;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+#aboutDivLeftSide {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 85px;
+    width: 35vw;
 }
-#aboutDivTitle{
-  padding-bottom: 20px;
+
+#aboutDivTitle {
+    padding-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
 }
-#aboutDivRightSide{
-    padding-top: 50px;
-  float: right;
+
+#aboutDivRightSide {
+    margin-top: 80px;
+    float: right;
+    width: 35vw;
 }
-  article .container2 {
-  width: 800px;
-  margin: 0 auto;
+
+article .container2 {
+    width: 70vw;
+    /* margin: 0 auto; */
 }
-#social{
-  clear: both;
+#storyImage{
+    height: 300px;
+    margin-left: 20px;
 }
+#social {
+    clear: both;
+}
+
 article .container3 {
-  height:250px;
-  background-size: cover; 
-  background-image: url("../../assets/images/gradient2.png");
-  color: white;
-  text-align: center;
-  font-size: x-large;
+    height: 250px;
+    background-size: cover;
+    background: rgb(98,79,3);
+    background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
+    color: white;
+    text-align: center;
+    font-size: x-large;
 }
-#socialText{
+
+#socialText {
     padding-bottom: 20px;
     padding-top: 50px;
 }
+
 .parallax .bg__break3 {
-  height: 500px;
-  box-shadow: inset 0 0 1em #111;
-  background-image: url("../../assets/images/woman-3138567_1920.jpg");
+    height: 60vh;
+    box-shadow: inset 0 0 1em #111;
+    background-image: url("../../assets/images/woman-3138567_1920.jpg");
 }
-   /*text box 3*/
-   .parallax .capture3 {
-  float: right;
-  width: 250px;
-  height: 200px;
-  padding: 1em;
-  margin: -1.5em 1em 0 0;
-  text-indent: 0;
-  background: rgba(243, 243, 243, 0.75);
-  box-shadow: 0 1px 0.125em #333;
-  opacity: .6;
-  text-align: center;
-  position: relative;
-  top: 35px;
-  right: 120px;
+
+/*text box 3*/
+.parallax .capture3 {
+    float: right;
+    width: 250px;
+    height: 200px;
+    padding: 1em;
+    margin: -1.5em 1em 0 0;
+    text-indent: 0;
+    background: rgba(243, 243, 243, 0.75);
+    box-shadow: 0 1px 0.125em #333;
+    opacity: .6;
+    text-align: center;
+    position: relative;
+    top: 35px;
+    right: 120px;
 }
-#galleryButton{
-  background-color: #333;
-  color: white;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 20px;
-  margin-bottom: 30px;
+
+#galleryButton {
+    background-color: #333;
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
-#servicesButton{
-  background-color: transparent;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
+#servicesButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-#testimonialsButton{
-  background-color: transparent;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: white;
+
+#testimonialsButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    color: white;
+}
+
+#qaButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#learnButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+#shopButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    background-color: #333;
+    color: white;
+}
+
+#contactButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+#formsButton {
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+article .container4 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+article .container9 {
+    text-align: center;
+    padding-top: 20px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#specialLeftSide {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#specialCenterSide {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#specialRightSide {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#SpecialsAboutButton {
+    background-color: #333;
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    margin-top: 50px;
+}
+
+#specialsBookingButton {
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+#microblading {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    padding-bottom: 20px;
+}
+
+article .container5 {
+    text-align: center;
+    padding-top: 20px;
+    background-size: cover;
+    background: rgb(98,79,3);
+    background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
+    color: white;
+}
+
+#testimonialTitle {
+    margin-bottom: 40px;
+}
+
+#testimonialsText {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#testimonial1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#testimonial2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#testimonial3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#testimonial4 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#qaSide {
+    /* float: left; */
+    /* margin-left: 160px; */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+}
+
+#learnSide {
+    float: right;
+    margin-right: 160px;
+    text-align: center;
+}
+
+.parallax .bg__break4 {
+    clear: both;
+    height: 60vh;
+  background: white;
+    box-shadow: inset 0 0 1em #111;
+    color: black;
+    
+}
+
+/*text box 3*/
+.parallax .capture4 {
+    clear: both;
+    width: 550px;
+    height: 200px;
+    padding: 1em;
+    margin: -1.5em 1em 0 0;
+    text-indent: 0;
+ color: white;
+    opacity: .6;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 120px;
+    left: 570px;
 }
 #qaButton{
   background-color: transparent;
@@ -221,433 +434,591 @@ article .container3 {
   font-size: large;
   margin-top: 30px;
   margin-bottom: 30px;
+  color: white;
+  font-weight: bold;
 }
-#learnButton{
-  background-color: transparent;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 30px;
-  margin-bottom: 30px;
+#formsSide {
+    float: left;
+    margin-left: 160px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-#shopButton{
-  background-color: transparent;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  /* margin-top: 20px; */
-  margin-bottom: 20px;
-  background-color: #333;
-color: white;
+
+#contactSide {
+    float: right;
+    margin-right: 160px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-#contactButton{
-  background-color: transparent;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 30px;
-  margin-bottom: 30px;
+#spanBoth {
+  background: rgb(98,79,3);
+  background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
+background-color: #8a1112;  
 }
-#formsButton{
-  background-color: transparent;
-  height: 50px;
-  width: 200px;
-  font-size: large;
-  margin-top: 30px;
-  margin-bottom: 30px;
+article .container8 {
+    width: 100%;
+    padding-top: 20px;
+    clear: both;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333;
+    color: white;
+
 }
-article .container4 {
-text-align: center;
-padding-top: 20px;
+
+.footer {
+    flex-shrink: 0;
+    background-color: #333;
+    color: white;
 }
-article .container9 {
-  text-align: center;
-  padding-top: 20px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  grid-template-rows: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
-  }
-  #specialLeftSide{
+
+#footer {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+    width: 100%;
+}
+
+#footerColumnOne {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1;
-  }
-  #specialCenterSide{
+}
+
+#footerColumnTwo {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
-  }
-  #specialRightSide{
+}
+
+#footerColumnThree {
+    padding-top: 20px;
+    text-align: center;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 1;
-  }
-  #SpecialsAboutButton{
-    background-color: #333;
-    color: white;
-    height: 50px;
-    width: 200px;
-    font-size: large;
-    margin-top: 50px;
-  }
-  #specialsBookingButton{
-    background-color: #333;
-    color: white;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-  }
-  #microblading{
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    padding-bottom: 20px;
-  }
-article .container5 {
-text-align: center;
-padding-top: 20px;
-background-size: cover; 
-  background-image: url("../../assets/images/gradient3.png");
-  color: white;
-}
-#testimonialTitle{
-  padding-bottom: 20px;
-}
-#testimonialsText{
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 100%;
-  width: 100%;
-}
-#testimonial1{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-#testimonial2{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-#testimonial3{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-#testimonial4{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-#qaSide{
-    float: left;
-    margin-left: 160px;
-    text-align: center;
-}
-#learnSide{
-    float: right;
-    margin-right: 160px;
-    text-align: center;
-}
-
-.parallax .bg__break4 {
-  clear: both;
-  height: 500px;
-  box-shadow: inset 0 0 1em #111;
-  background-image: url("../../assets/images/massage-therapy-1612308.jpg");
-}
-   /*text box 3*/
-   .parallax .capture4 {
-      clear: both;
-  width: 250px;
-  height: 200px;
-  padding: 1em;
-  margin: -1.5em 1em 0 0;
-  text-indent: 0;
-  background: rgba(243, 243, 243, 0.75);
-  box-shadow: 0 1px 0.125em #333;
-  opacity: .6;
-  text-align: center;
-  position: relative;
-  top: 250px;
-  left: 170px;
-}
-#formsSide{
-  float: left;
-  margin-left: 160px;
-  text-align: center;
-}
-#contactSide{
-  float: right;
-  margin-right: 160px;
-  text-align: center;
-}
-article .container8 {
-    width: 100%;
-padding-top: 20px;
-clear: both;
-height: 200px;
-display: flex;
-flex-wrap: wrap;
-background-color: #333;
-color: white;
-
-}
-.footer {
-flex-shrink: 0;
-background-color: #333;
-color: white;
-}
-#footer{
-  display: grid;
-grid-template-columns: 33.33% 33.33% 33.33%;
-grid-template-rows: 100%;
-width: 100%;
-}
-#footerColumnOne{
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-#footerColumnTwo{
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-#footerColumnThree{
-  padding-top: 20px;
-  text-align: center;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 1;
 }
 
 /* selected link */
 a:active {
-  color: white;
+    color: white;
 }
+
 a:link {
-  color: white;
+    color: white;
 }
 
 /* visited link */
 a:visited {
-  color: white;
+    color: white;
 }
 
 /* mouse over link */
 a:hover {
-  color: white;
+    color: white;
 }
 
 /* navbar */
-.animated-icon1, .animated-icon3, .animated-icon4 {
-  width: 30px;
-  height: 20px;
-  position: relative;
-  margin: 0px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-  }
-  .animated-icon1 span, .animated-icon3 span, .animated-icon4 span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-  }
-  .animated-icon1 span {
-  background: #8a1112;
-  }
-  .animated-icon1 span:nth-child(1) {
-  top: 0px;
-  }
-  .animated-icon1 span:nth-child(2) {
-  top: 10px;
-  }
-  .animated-icon1 span:nth-child(3) {
-  top: 20px;
-  }
-  .animated-icon1.open span:nth-child(1) {
-  top: 11px;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-  }
-  .animated-icon1.open span:nth-child(2) {
-  opacity: 0;
-  left: -60px;
-  }
-  .animated-icon1.open span:nth-child(3) {
-  top: 11px;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  }
-  #linkList{
+.animated-icon1,
+.animated-icon3,
+.animated-icon4 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.animated-icon1 span,
+.animated-icon3 span,
+.animated-icon4 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.animated-icon1 span {
+    background: #8a1112;
+}
+
+.animated-icon1 span:nth-child(1) {
+    top: 0px;
+}
+
+.animated-icon1 span:nth-child(2) {
+    top: 10px;
+}
+
+.animated-icon1 span:nth-child(3) {
+    top: 20px;
+}
+
+.animated-icon1.open span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.animated-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.animated-icon1.open span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#linkList {
     float: right;
     text-align: right;
-  }
-  #navbar{
+}
+
+#navbar {
     background-color: transparent;
-  }
-  #menu{
+}
+
+#menu {
     background-color: transparent;
-  }
-  #brand{
+}
+
+#brand {
     color: #36271a;
-  text-shadow:
-   -.25px -.25px 0 white,  
-    .25px -.25px 0 white,
-    -.25px .25px 0 white,
-     .25px .25px 0 white;
-  }
-  #tagLine2{
+    text-shadow:
+        -.25px -.25px 0 white,
+        .25px -.25px 0 white,
+        -.25px .25px 0 white,
+        .25px .25px 0 white;
+}
+
+#tagLine2 {
     font-size: x-large;
-  }
-  .nav-link{
+}
+
+.nav-link {
     color: #36271a;
-  text-shadow:
-  -.15px -.15px 0 white,  
-    .15px -.15px 0 white,
-    -.15px .15px 0 white,
-     .15px .15px 0 white;
-  }
-
-.modal-header{
-background-image: url("../images/gradient4.png");
-background-size: cover;
-background-repeat: no-repeat;
-color: white;
-display: flex; 
-flex-direction: column;
-text-align: center;
-}
-#modalButton{
-  background-color: transparent;
-  border-color: transparent;
-  border-style: none;
-  width:200px;
-  box-shadow: 0 1px 0.125em #333;
-}
-#modalCloseButton{
-  position: relative;
-  right: 70px;
-  top: 15px
+    text-shadow:
+        -.15px -.15px 0 white,
+        .15px -.15px 0 white,
+        -.15px .15px 0 white,
+        .15px .15px 0 white;
 }
 
+.modal-header {
+background: rgb(98,79,3);
+background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#modalButton {
+    background-color: transparent;
+    border-color: transparent;
+    border-style: none;
+    width: 200px;
+    box-shadow: 0 1px 0.125em #333;
+}
+
+#modalCloseButton {
+    position: relative;
+    right: 70px;
+    top: 15px
+}
+
+.footerSocial {
+    height: 50px;
+}
+.connectLink{
+  height: 100px;      
+}
+.parallax .bg__break5{
+    background: rgb(98,79,3);
+background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
+}
+.quote{
+    height: 75px;
+}
 /*--------------------------------------------------------
 Responsive elements
 --------------------------------------------------------*/
 
 /* Small devices (landscape phones, less than 812px) */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    article .container1{
-      width: 70vw;
-      margin-left: 10vw;
-     
-    }
-  
-    .parallax .capture1{
-          min-width: 50vw;
-        }
-        .footerSocial{
-          /* height: 20px; */
-          display: flex;
-          flex-direction: column;
-          margin-left: 10vw;
-          margin-bottom: 2vh;
-        }
-  }
-@media only screen 
-and (min-device-width: 320px) 
+@media only screen and (min-device-width: 320px) 
 and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) { 
-  article .container1{
-    width: 70vw;
-    margin-left: 10vw;
+and (-webkit-min-device-pixel-ratio: 3) 
+and (orientation: portrait) {
+    .parallax .bg__break1 {
+        height: 105vh;
+        /* max-height: 812px; */
+        /* background-size: contain; */
+        background-repeat: no-repeat;
+        /* background-image: url("../images/landingMobile.jpg") */
+    }
+
+    .parallax .capture1 {
+      left: 0px;
+      width: 80vw;
+     top: 90px
+
+    }
+
+    #arrow {
+        position: relative;
+        left: 40vw;
+       top: 500px;
+    }
+    #menu{
+        margin-bottom: 0px;
+        height: 60px;
+    }
+    article .container1 {
+     
+      margin-right: 0vw;
+      width: 100vw;
+      height: fit-content;
   }
-  .parallax .capture1{
-        min-width: 50vw;
+  #bookingText{
+    width: 80vw;
+    align-self: center;
+    margin-left: 10vw;
+    margin-bottom: 20px;
+  }
+  #bookingButton
+  {
+    margin-bottom: 20px;
+  }
+  /* specials div */
+  article .container9 {
+    height: 420px;
+}
+#specialsTitle{
+width: 100vw;
+position: relative;
+right: 35vw;
+}
+  #SpecialsAboutButton{
+position: relative;
+top: 25vh;
+right: 15vw;
+  }
+  #specialLeftSide{
+margin-top: 50px;
+  }
+  #specialRightSide{
+    margin-top: 50px;
+  }
+  /* break 1 */
+  .parallax .bg__break2 {
+    margin-left: 0vw;
+    margin-right: 0vw;
+    width: 100vw;
+    height: 20vh;
+    background: rgb(98,79,3);
+    background: linear-gradient(90deg, rgba(98,79,3,1) 0%, rgba(82,12,65,1) 50%, rgba(23,3,47,1) 100%);
+}
+.parallax .capture2{
+    top: 30px;
+    left: 22vw;
+}
+    #aboutDivLeftSide{
+float: none;
+width: 100vw;
+padding-bottom: 0px;
+    }
+    /* about div */
+    #storyImage{
+width: 100vw;
+margin-left: 0px;
+height: auto;
+
+    }
+ 
+    #aboutDivRightSide{
+        width: 80vw; 
+        float: none;
+       margin-top: 20px;
+       margin-bottom: 20px;
+       margin-left: 10vw;
+       text-align: center;
+    }
+    /* social div */
+    .connectLink{
+height: 50px;
+    }
+    .parallax .bg__break3 {
+        background: white;
+        background-image: none;
+    }
+    .parallax .capture3 {
+       float: none;
+        position: relative;
+        left: 17vw;
+        right: 0px;
+        top:18vh;
+    }
+    article .container5{
+        height: 100vh;
+    }
+    .quote{
+        height: 50px;
+    }
+    #testimonial1{
+position: relative;
+width: 40vw;
+left: 5vw;
+    }
+    #testimonial2{
+        position: relative;
+        width: 40vw;
+        left: 25vw;
+    }
+    #testimonial3{
+        width: 40vw;
+        position: relative;
+        top: 40vh;
+        right: 45vw;
+    }
+    #testimonial4{
+        width: 40vw;
+        position: relative;
+        top: 40vh;
+        right: 22vw;
+    }
+    #testimonialsButton{
+        position: relative;
+        top: 35vh;
+    }
+    .parallax .capture4{
+        width: 75vw;
+         left: 12vw;
+         top:12vh;
+         /* right: 15vw; */
+     }
+     #formsSide{
+         margin-left: 20vw;
+     }
+     #contactSide{
+         margin-right:25px;
+     }
+     .footerSocial{
+        /* height: 20px; */
+        display: flex;
+        flex-direction: column;
+        margin-left: 10vw;
+        margin-bottom: 2vh;
       }
+
+}
+
+
+@media only screen and (min-device-width: 320px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) 
+and (orientation: landscape) {
+    .parallax .bg__break1 {
+        height: 115vh;
+  width: 100vw;
+        background-repeat: no-repeat;
+        /* background-image: url("../images/landingMobile.jpg") */
+    }
+    .parallax .capture1 {
+        top: 50px;
+ left: 0px;
+ }
+    #arrow{
+        top: 150px;
+        left: 45vw;
+    }
+
+ article .container1 {
+height: fit-content;
+
+}
+article .container9 {
+    width: 100vw;
+    /* height: auto; */
+    
+    }
+ #bookingButton{
+     margin-bottom: 20px;
+ }
+#specialCenter{
+    margin-left: 5vw;
+}
+
+  .parallax .capture2 {
+    top: 0px;
+left: 0px;
+}
+
+#aboutDivRightSide{
+    width: 35vw;
+    position: relative;
+    left: 20vw;
+    bottom: 7vh;
+}
+#servicesText{
+    width: 80vw;
+   position: relative;
+   left: 10vw;
+}
+.parallax .capture4 {
+    top: 0px;
+left: 15vw;
+}
+#formsSide{
+    margin-left: 60px
+}
+#contactSide{
+    margin-right: 60px
+}
 }
 
 /* Medium devices (tablets, less than 1366px) */
-@media only screen 
-and (min-device-width: 768px) 
+@media only screen and (min-device-width: 768px) 
 and (max-device-width: 1366px) 
-and (-webkit-min-device-pixel-ratio: 2)
+and (-webkit-min-device-pixel-ratio: 2) 
 and (orientation: portrait) {
-  article .container1{
-    width: 70vw;
-    margin-left: 10vw;
-   
-  }
+    .parallax .bg__break1 {
+        height: 107vh;
+  width: 100vw;
+        background-repeat: no-repeat;
+    }
+    .parallax .capture1 {
+        top: 15vh;
+ left: 0px;
+ }
+    #arrow{
+        top: 70vh;
+        left: 40vw;
+    }
  
-  .parallax .capture1{
-        min-width: 50vw;
-      }
+    .parallax .capture4 {
+        top: 0px;
+    left: 15vw;
+    }
+    #specialCenter{
+        margin-left: 5vw;
+    }
+    .parallax .capture2 {
+        top: 0px;
+    left: 0px;
+    }
+    #aboutDivRightSide{
+        width: 35vw;
+        position: relative;
+        left: 20vw;
+        bottom: 3vh;
+    }
+    .parallax .bg__break4 {
+        height: 27vh;
+  width: 100vw;
+     
+    }
+    #formsSide{
+        margin-left: 60px
+    }
+    #contactSide{
+        margin-right: 60px
+    }
 }
+
 /* Medium devices (tablets, less than 1366px) */
-@media only screen 
-and (min-device-width: 768px) 
+@media only screen and (min-device-width: 768px) 
 and (max-device-width: 1366px) 
-and (-webkit-min-device-pixel-ratio: 2)
+and (-webkit-min-device-pixel-ratio: 2) 
 and (orientation: landscape) {
-  article .container1{
-    width: 70vw;
-    margin-left: 10vw;
-   
-  }
- 
-  .parallax .capture1{
-        min-width: 50vw;
-      }
+    .parallax .bg__break1 {
+        height: 107vh;
+  width: 100vw;
+        background-repeat: no-repeat;
+    }
+    .parallax .capture1 {
+        top: 15vh;
+ left: 0px;
+ }
+    #arrow{
+        top: 70vh;
+        left: 45vw;
+    }
+    #bookingText {
+       width: 80vw;
+       position: relative;
+       left: 10vw;
+        
+        }
+    .parallax .capture4 {
+        top: 0px;
+    left: 22vw;
+    margin-bottom: 5vh;
+    }
+    #specialCenter{
+        margin-left: 5vw;
+    }
+    .parallax .capture2 {
+        top: 0px;
+    left: 0px;
+    }
+    #aboutDivRightSide{
+        width: 35vw;
+        position: relative;
+        left: 20vw;
+        bottom: 3vh;
+    }
+    .parallax .bg__break4 {
+        height: 32vh;
+  width: 100vw;
+     
+    }
+    #formsSide{
+        margin-left: 60px
+    }
+    #contactSide{
+        margin-right: 60px
+    }
 }
 
 
