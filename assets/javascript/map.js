@@ -1,3 +1,5 @@
+var mykey = config.MY_KEY;
+
         // Initialize and add the map
         function initMap() {
             var styledMapType = new google.maps.StyledMapType(
@@ -196,10 +198,12 @@
                     }
                 ],
                 {name: 'Styled Map'});
+                
             // The location of High Brow Scottdale
             var highBrowScottsdale = {lat: 33.492460, lng: -111.927120};
             // The map, centered at High Brow Scottdale
             var map = new google.maps.Map(document.getElementById('map'), {
+                // source: url='https://maps.googleapis.com/maps/api/js?key='+ mykey + '&callback=initMap',
                 center: {lat: 33.492460, lng: -111.927120},
                 zoom: 18,
                         });
